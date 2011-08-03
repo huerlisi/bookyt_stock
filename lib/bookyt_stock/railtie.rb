@@ -1,10 +1,10 @@
-require 'bookyt_salary'
+require 'bookyt_stock'
 require 'rails'
 
-module BookytSalary
+module BookytStock
   class Railtie < Rails::Engine
     initializer :after_initialize do |app|
-      app.config.bookyt.engines << 'bookyt_salary'
+      app.config.bookyt.engines << 'bookyt_stock'
     end
   end
 end

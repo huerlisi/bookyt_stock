@@ -1,3 +1,3 @@
-module BookytSalary
+module BookytStock
   VERSION = '0.1.0'
 end

@@ -1,16 +1,16 @@
 # encoding: utf-8
 
 $:.unshift File.expand_path('../lib', __FILE__)
-require 'bookyt_salary/version'
+require 'bookyt_stock/version'
 
 Gem::Specification.new do |s|
-  s.name         = "bookyt_salary"
-  s.version      = BookytSalary::VERSION
+  s.name         = "bookyt_stock"
+  s.version      = BookytStock::VERSION
   s.authors      = ["Simon Hürlimann (CyT)"]
   s.email        = "simon.huerlimann@cyt.ch"
-  s.homepage     = "https://github.com/huerlisi/bookyt_salary"
-  s.summary      = "Salary plugin for bookyt"
-  s.description  = "This plugin extends bookyt with Salary functionality."
+  s.homepage     = "https://github.com/huerlisi/bookyt_stock"
+  s.summary      = "Stock plugin for bookyt"
+  s.description  = "This plugin extends bookyt with asset/stock functionality."
 
   s.files        = `git ls-files app lib config`.split("\n")
   s.platform     = Gem::Platform::RUBY

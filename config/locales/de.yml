@@ -1,27 +1,30 @@
 de:
   activerecord:
     models:
-      salary: Lohn
+      stock: Bestand
 
     attributes:
-      salary:
-        amount:        Bruttolohn
-        net_amount:    Nettolohn
-        bvg_amount:    BVG
-        social_amount: AHV/IV/EO/ALV/NBU
-        customer:      Arbeitgeber
-        company:       Arbeitnehmer
+      stock:
+        invoice_id:       Rechnungs Nr.
+        purchase_invoice: Kaufbeleg
+        selling_invoice:  Verkaufsbeleg
+        amount:           Anschaffungswert
+        balance:          Buchwert
+        balance_begin:    Buchwert Anfang
+        balance_end:      Buchwert Ende
+        write_downs:      Abschreibungen
+        change:           Zu-/Abgänge
+        remarks:          Bemerkungen
+        title:            Titel
+        state:            Status
+        direct_account:   Konto
 
-  crud:
-    title:
-      day:
-        new: Abrechnung von %{day}
+  stock:
+    state:
+      available: vorhanden
+      amortized: amortisiert
+      sold:      verkauft
+      removed:   entsorgt
 
-  bookyt:
-    main_navigation:
-      days:       Tagesabschlüsse
-      new_day:    Tagesabschluss
-
-      tooltip:
-        new_day:  Hier können Sie einen neuen Tagesabschluss gemäss Registrierkasse buchen
-        days:     Hier finden Sie eine Liste aller Tagesabschlüsse
+  title:
+    stocks:      Posten
