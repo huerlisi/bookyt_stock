@@ -1,0 +1,11 @@
+%table.list#stocks_list
+  %tr
+    %th= t_attr :title, Stock
+    %th= t_attr :purchase_invoice, Stock
+    %th= t_attr :direct_account, Stock
+    %th= t_attr :state, Stock
+    %th.currency= t_attr :amount, Stock
+    %th.currency= t_attr :balance, Stock
+    %th.action-links
+
+  = render @stocks

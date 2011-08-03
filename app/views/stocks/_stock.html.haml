@@ -1,0 +1,10 @@
+%tr[stock]
+  %td= link_to stock.title, stock, {'data-href-container' => 'tr'}
+  %td= link_to stock.purchase_invoice, stock.purchase_invoice if stock.purchase_invoice
+  %td= link_to stock.direct_account, stock.direct_account
+  %td= t_stock_state(stock.state)
+  %td.currency= currency_fmt(stock.amount)
+  %td.currency= currency_fmt(stock.balance)
+  %td.action-links
+    = list_link_for(:edit, stock)
+    = list_link_for(:delete, stock)

@@ -1,0 +1,20 @@
+= contextual_links
+
+%h1= t_title
+
+%table.list#stocks_write_downs_list
+  %tr
+    %th= t_attr :title, Stock
+    %th.currency= t_attr :balance_begin, Stock
+    %th.currency= t_attr :change, Stock
+    %th.currency= t_attr :write_downs, Stock
+    %th.currency= t_attr :balance_end, Stock
+  - for stock in @stocks
+    %tr[stock]
+      %td= link_to stock.title, stock, {'data-href-container' => 'tr'}
+      %td.currency= currency_fmt(stock.balance(@start_date))
+      %td.currency= currency_fmt(stock.amount_changes(@date))
+      %td.currency= currency_fmt(stock.write_downs(@date))
+      %td.currency= currency_fmt(stock.balance(@end_date))
+
+= render 'bookings/sidebar'
