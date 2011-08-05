@@ -35,9 +35,6 @@ class StocksController < AuthorizedController
 
   def write_downs
     # use current date if not specified otherwise
-    params[:profit] ||= {}
-
-    # use current date if not specified otherwise
     if params[:by_value_period]
       @end_date = Date.parse(params[:by_value_period][:to])
       @start_date = Date.parse(params[:by_value_period][:from])
