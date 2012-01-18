@@ -1,7 +1,7 @@
 de:
   activerecord:
     models:
-      stock: Bestand
+      stock: Anlage
 
     attributes:
       stock:
@@ -26,5 +26,8 @@ de:
       sold:      verkauft
       removed:   entsorgt
 
-  title:
-    stocks:      Posten
+  stocks:
+    list:
+      title: Anlagen
+    index:
+      title: Anlagen
