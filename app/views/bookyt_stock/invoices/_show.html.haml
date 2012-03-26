@@ -4,6 +4,6 @@
 
 #assets_list
   - unless resource.stocks.empty?
-    %table.zebra-striped.collection
+    %table.table.table-striped.collection
       %thead
         = render :partial => 'stock', :collection => resource.stocks
